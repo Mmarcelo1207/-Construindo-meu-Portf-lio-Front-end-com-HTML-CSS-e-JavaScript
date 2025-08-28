@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Alves | Portfólio</title>
+    <meta name="description"
+        content="Portfolio do desenvolver front-end Marcelo Alves, para compartilahr projetos e habilidades desenvolvidas.">
+
+    <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Marcelo Alves</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+
+    <section id="sobre" class="sobre">
+        <img src="assets/favicon-16x16.png" alt="Foto de perfil">
+        <h2>Sobre mim</h2>
+        <p>Olá! Meu nome é <strong>Marcelo Alves</strong>, tenho 26 anos e atualmente curso <em>Análise e
+                Desenvolvimento de Sistemas</em>.
+            Tenho conhecimento em <strong>HTML, CSS e JavaScript</strong> e estou em busca de oportunidades para crescer
+            como desenvolvedor.</p>
+    </section>
+
+
+    <section id="habilidades" class="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projetos">
+            <div class="card">
+                <h3>Projeto 1</h3>
+                <p>Em breve um novo projeto.</p>
+            </div>
+            <div class="card">
+                <h3>Projeto 2</h3>
+                <p>Em breve um novo projeto.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo através das redes abaixo:</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mmarcelo1207@gmail.com" target="_blank">
+            Enviar Email
+        </a>
+        <a href="https://www.linkedin.com/in/marceloalves-p/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Mmarcelo1207" target="_blank">GitHub</a>
+    </section>
+
+
+    <footer>
+        <p>© 2025 - Desenvolvido por Marcelo Alves</p>
+    </footer>
+
+    <script>
+
+        const sections = document.querySelectorAll("section");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>
